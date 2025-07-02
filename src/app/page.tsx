@@ -37,7 +37,7 @@ export default function HomePage() {
       await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID_OWNER, form, PUBLIC_KEY);
       setSent(true);
       form.reset();
-    } catch (_) {
+    } catch {
       setError("Failed to send message. Please try again.");
     } finally {
       setSending(false);
